@@ -18,6 +18,10 @@ app.use(cors())
 app.use('/posts', postRoutes)
 app.use('/user', userRoutes)
 
+app.get('/', (req, res) => {
+    res.send('APP IS RUNNING.');
+});
+
 // const CONNECTION_URL = 'mongodb+srv://pabllot07:Dean1967@cluster0.u619fb2.mongodb.net/?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 5000
 
